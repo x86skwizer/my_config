@@ -44,3 +44,9 @@ chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
 cd squashfs-root/usr/bin/
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && ./nvim
+
+echo
+echo "## "
+echo "## routine: [my_config] // status: [completed]"
+echo "## "
+echo
