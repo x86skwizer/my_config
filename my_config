@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+sudo apt update
+sudo apt upgrade -y
+
+git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
+sudo apt install tmux -y
+
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+sudo apt install fonts-powerline -y
+
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage --appimage-extract
+cd ~/squashfs-root/usr/bin
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && ./nvim
