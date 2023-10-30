@@ -104,7 +104,7 @@ plugins=(
 )
 
 
-export PATH=$PATH:/root/squashfs-root/usr/bin/
+export PATH=$PATH:/root/my_config/squashfs-root/usr/bin/
 alias v='nvim'
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
 # Custom plugins may be added to ~/.oh-my-bash/custom/plugins/
