@@ -1,16 +1,52 @@
 #!/usr/bin/bash
 
+# Check for root permissions
+if [[ $(whoami) != "root" ]]; then
+    echo "Please run this script as root user"
+    exit 1
+fi
+
+# Stop the script in the event something failed
+set -e
+
+# Reset the terminal screen
+reset
+clear
+
+# Print a message to std out that the process has started
+echo
+echo "## "
+echo "## routine: [my_config] // status: [starting]"
+echo "## "
+echo
+
+# Update the operating System packages
 sudo apt update
+# Upgrade existing software and operating system
 sudo apt upgrade -y
 
+# Install Tmux && add tmux-themepack
 git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
 sudo apt install tmux -y
 
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+# Install oh-my-bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" &
+
+# Waiting for oh-my-bash install process
+wait
+
+# fonts-powerline for oh-my-bash config
 sudo apt install fonts-powerline -y
 
+# Install nvim && add NvChad config
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
-cd squashfs-root/usr/bin
+cd squashfs-root/usr/bin/
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && ./nvim
+
+echo
+echo "## "
+echo "## routine: [my_config] // status: [completed]"
+echo "## "
+echo
