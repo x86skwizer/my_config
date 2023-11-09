@@ -28,4 +28,6 @@ This script assumes you are using a Debian-based Linux distribution with `apt` p
 Use this script at your own risk. It is recommended to review the script and understand the commands before executing it on your system.
 
 ## AUTHORS
-[x86skwizer]([https://github.com/x86skwizer) & [mberrouk]([https://github.com/mberrouk)
+
+## AUTHORS
+[x86skwizer](https://github.com/x86skwizer) & [mberrouk](https://github.com/mberrouk)
