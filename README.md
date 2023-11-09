@@ -30,4 +30,4 @@ Use this script at your own risk. It is recommended to review the script and und
 ## AUTHORS
 
 ## AUTHORS
-[x86skwizer](https://github.com/x86skwizer) & [mberrouk](https://github.com/mberrouk)
+[x86skwizer](https://github.com/x86skwizer)  &  [mberrouk](https://github.com/mberrouk)
