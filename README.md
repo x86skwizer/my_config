@@ -21,7 +21,7 @@ sudo ./my_config_setup.sh
 
 ## Note
 
-While working with Neovim, in case of `Warning: multiple different client offset_encodings detected for buffer`, in custom->config->lspconfig.lua at the top you need to add this line:
+While working with Neovim, in case of `Warning: multiple different client offset_encodings detected for buffer`, in `custom/config/lspconfig.lua` at the top you need to add this line:
 
 ```
 local on_attach = require("plugins.configs.lspconfig").on_attach
