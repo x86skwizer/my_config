@@ -21,6 +21,32 @@ sudo ./my_config_setup.sh
 
 ## Note
 
+While working with Neovim, in case of `Warning: multiple different client offset_encodings detected for buffer`, in custom->config->lspconfig.lua at the top you need to add this line:
+
+```
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
+capabilities.offsetEncoding = { "utf-16" }
+```
+
+If you want tab characters in your file to appear 4 character cells wide, go to `./config/nvim/lua/core/`, open `init.lua` and change these lines:
+
+```
+-- Indenting
+opt.expandtab = false
+opt.shiftwidth = 4
+opt.smartindent = true
+opt.tabstop = 4
+opt.softtabstop = 4
+```
+
+For my usual Tmux config and .bashrc:
+
+```bash
+cp .tmux.conf ~
+cp .bashrc ~
+```
+
 This script assumes you are using a Debian-based Linux distribution with `apt` package manager. If you are using a different distribution or package manager, you may need to adjust the commands accordingly.
 
 ## Disclaimer
