@@ -1,4 +1,4 @@
-# My Configuration Setup Script
+# Configuration Setup Script
 
 This script automates the setup of my preferred configurations for the terminal environment. It performs the following tasks:
 
