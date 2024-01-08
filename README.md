@@ -16,7 +16,7 @@ This script automates the setup of my preferred configurations for the terminal 
 Make sure to run this script with root permissions:
 
 ```bash
-sudo ./my_config_setup.sh
+sudo bash my_config
 ```
 
 ## Note
